@@ -1,0 +1,270 @@
+<!-- Name:Kinza Batool -->
+<!-- Rollno#010 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+<style>
+  body { font-family: Arial, sans-serif;  background-image: url('img (122).jpg');}
+  .form-container { max-width: 600px; margin: 20px auto;background-color: rgb(185, 100, 100);padding-left: 50px;padding-right: 70px;padding-top: 5px;padding-bottom: 50px; }
+  .form-group { margin-bottom: 10px; }
+  .form-group label { display: block; margin-bottom: 5px; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 8px; }
+  .form-row { display: flex; justify-content: space-between; }
+  .form-row .form-group { flex: 1; margin-right: 5px; }
+  .form-row .form-group:last-child { margin-right: 0; }
+  .form-group p{font-size: small; color: rgb(53, 51, 51);}
+  .button-container { text-align: left; }
+  .submit-button { background-color: rgb(60, 184, 60); color: white; padding: 10px 15px; border: none; cursor: pointer; }
+  .clear-button { background-color:  rgb(60, 184, 60); color: white; padding: 10px 15px; border: none; cursor: pointer; margin-left: 350px; }
+  .error-message { display: none; color: red; font-size: 12px; }
+  input:required { border: 1px solid red; /* Default border color for required fields */ }
+  input:focus { outline: 2px solid blue; /* Border color for focused input fields */} 
+</style>
+</head>
+<body>
+<div class="form-container">
+  <form id="registrationForm">
+    <h1 style="text-align: left;">Student Registration Form</h1>
+    <p>Fill out the form carefully for registration</p>
+    <div class="form-row" style="margin-top: 70px;">
+      <div class="form-group" style="margin-right: 30px;">
+        <label for="sname">Student Name</label>
+        <input type="text" id="firstName" name="firstName" required maxlength="20" pattern="[A-Za-z]+">
+        <p>First Name</p>
+      </div>
+      <div class="form-group" style="padding-top: 23px;">
+        <input type="text" id="middleName" name="middleName" required maxlength="20" pattern="[A-Za-z]+">
+        <p>Middle Name</p>
+      </div>
+      <div class="form-group" style="margin-left: 25px;padding-top: 23px;">
+        <input type="text" id="lastName" name="lastName" required maxlength="20" pattern="[A-Za-z]+">
+        <p>Last Name</p>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group" >
+        <label for="bdate">Birth Date</label>
+        <select id="birthMonth" name="birthMonth" required style="width: 90px;">
+          <option value="0">Select...</option>
+          <option value="01">January</option>
+          <option value="02">February</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+          <!-- Add options for the rest of the months -->
+        </select>
+        <p>Month</p>
+      </div>
+        <div class="form-group" style="padding-top: 23px;">
+          <select id="birthday" name="birthday" required style="width: 90px;">
+            <option value="start">Select...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <p>Day</p>
+        </div>
+        <div class="form-group" style="padding-top: 23px;padding-right: 90px;">
+          <select id="birthyear" name="birthyear" required style="width: 90px;">
+            <option value="start">Select...</option>
+            <option value="1">1980</option>
+            <option value="1">1981</option>
+            <option value="2">1982</option>
+            <option value="3">1983</option>
+            <option value="4">1984</option>
+            <option value="5">1985</option>
+            <option value="6">1986</option>
+            <option value="7">1987</option>
+            <option value="8">1988</option>
+            <option value="9">1989</option>
+            <option value="9">1990</option>
+            <option value="9">1991</option>
+            <option value="9">1992</option>
+            <option value="9">1993</option>
+            <option value="9">1994</option>
+            <option value="9">1995</option>
+            <option value="9">1996</option>
+            <option value="9">1997</option>
+            <option value="9">1998</option>
+            <option value="9">1999</option>
+            <option value="9">2000</option>
+            <option value="9">2001</option>
+            <option value="9">2002</option>
+            <option value="9">2003</option>
+            <option value="9">2004</option>
+            <option value="9">2005</option>
+            <option value="9">2006</option>
+            <option value="9">2007</option>
+            <option value="9">2008</option>
+            <option value="9">2009</option>
+            <option value="10">2010</option>
+            <option value="11">2011</option>
+            <option value="12">2012</option>
+            <option value="13">2013</option>
+            <option value="14">2014</option>
+            <option value="15">2015</option>
+            <option value="16">2016</option>
+            <option value="17">2017</option>
+            <option value="18">2018</option>
+            <option value="19">2019</option>
+            <option value="20">2020</option>
+          </select>
+          <p>Year</p>
+        </div>
+      <div class="form-group" style="padding-left: 40px;">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required style="width: 200px;">
+          <option value="1">Select...</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" maxlength="250" required>
+      <p>Street Address</p>
+    </div>
+    <div class="form-group">
+      <input type="text" id="address2" name="address2" maxlength="250" required>
+      <p>Street Address Line 2</p>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <input type="text" id="city" name="city" required maxlength="50">
+        <p>City</p>
+      </div>
+      <div class="form-group" style="margin-left: 30px;">
+        <input type="text" id="state" name="state" required maxlength="50">
+        <p>State/Province</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="text" id="postalCode" name="postalCode" required maxlength="5" pattern="\d{5}">
+      <p>Postal/Zip Code</p>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Student E-mail</label>
+        <input type="email" id="email" name="email" placeholder="ex: myname@eample.com" required maxlength="250">
+      </div>
+      <div class="form-group" style="margin-left: 30px;">
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="(000) 000-0000" required maxlength="12" pattern="\d{12}">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(000) 000-0000" maxlength="12" pattern="\d{12}">
+      </div>
+      <div class="form-group" style="margin-left: 30px;">
+        <label for="workNumber">Work Number</label>
+        <input type="tel" id="workNumber" name="workNumber" placeholder="(000) 000-0000" maxlength="12" pattern="\d{12}">
+      </div>
+    </div>
+    <div class="form-group" style="margin-right: 350px;">
+      <label for="company">Company</label>
+      <input type="text" id="company" name="company" required maxlength="150">
+    </div>
+    <div class="form-group" style="margin-right: 328px;">
+      <label for="courses">Courses</label>
+      <select id="courses" name="courses" required>
+        <option value="course1">Select...</option>
+        <option value="course1">Forensics</option>
+        <option value="course2">Ethical Hacking</option>
+        <option value="course3">Networking</option>
+        <option value="course4">Operation System</option>
+        <option value="course5">Python Programming</option>
+        <option value="course6">C++</option>
+        <option value="course7">Maths</option>
+        <option value="course8">International Relation</option>
+        <option value="course9">Mass Communication</option>
+        <option value="course10">Computer Science</option>
+        <!-- Add more course options here -->
+      </select>
+    </div>
+    <div class="form-group" style="margin-right: 350px;">
+      <label for="phoneNumber">Phone Number*</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(000) 000-0000" maxlength="12" pattern="\d{12}">
+      <p>Please enter a valid phone number.</p>
+    </div>
+    <div class="form-group" >
+      <label for="additionalComments">Additional Comments</label>
+      <textarea id="additionalComments" name="additionalComments" rows="4" maxlength="500"></textarea>
+    </div>
+    <div class="button-container">
+      <button type="submit" class="submit-button">Submit Application</button>
+      <button type="reset" class="clear-button">Clear Fields</button>
+    </div>
+  </form>
+</div>
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      var formIsValid = validateForm();
+      if (!formIsValid) {
+        event.preventDefault(); // Prevent form submission
+        alert('Please fill out all required fields correctly.'); // Show alert message
+      }
+    });
+    
+    document.querySelector('.clear-button').addEventListener('click', function() {
+      document.getElementById('registrationForm').reset(); // Reset form fields
+    });
+    
+    function validateForm() {
+      var isValid = true;
+      var formGroups = document.querySelectorAll('.form-group');
+      formGroups.forEach(function(formGroup) {
+        var input = formGroup.querySelector('input, select, textarea');
+        if (input.required && !input.value.trim()) {
+          isValid = false;
+          formGroup.querySelector('.error-message').style.display = 'block'; // Show error message
+        } else {
+          formGroup.querySelector('.error-message').style.display = 'none'; // Hide error message
+        }
+      });
+      return isValid;
+    }
+    </script>
+</body>
+</html>
